@@ -50,13 +50,12 @@ export default function Header() {
       <header className="bg-gray-800 py-4">
         <div className="container mx-auto flex items-center justify-between px-4">
           <h1 className="text-white flex text-yellow-300 font-bold">
-            <div className="mt-1 hidden md:flex text-4xl"><ion-icon name="videocam-outline"></ion-icon></div>
-            <a className="md:ml-2 md:mt-2" href="/">Movie App</a>
+            <a className="md:ml-2 md:mt-2" href="/"><i class="fa-solid fa-film"></i>  YengFlix</a>
           </h1>
           <nav className={`md:block ${isNavbarVisible ? "md:static absolute md:mt-0 mt-64 grid text-center bg-black w-full h-fit left-0" : "hidden"}`}>
             <ul className="md:flex">
               <li className="p-3 bg-gray-800">
-                <a href="#" className="text-white hover:text-gray-300">Home</a>
+                <a href="#" className="text-white hover:text-gray-300"><i class="fa-solid fa-house"></i> Home</a>
               </li>
               <li className="p-3 bg-gray-800">
                 <a
@@ -65,14 +64,14 @@ export default function Header() {
                   onMouseEnter={() => setIsGenreHovered(true)}
                   onClick={() => { setIsGenreHovered(true); setIsNavbarVisible(false); }}
                 >
-                  Genre
+                  <i class="fa-solid fa-clapperboard"></i> Genre
                 </a>
               </li>
               <li className="p-3 bg-gray-800">
-                <a href="#" className="text-white hover:text-gray-300">Popular Movies</a>
+                <a href="#" className="text-white hover:text-gray-300"><i class="fa-solid fa-fire"></i> Popular</a>
               </li>
               <li className="p-3 bg-gray-800">
-                <a href="/ApiDocs" className="text-white hover:text-gray-300">API DOCS</a>
+                <a href="/ApiDocs" className="text-white hover:text-gray-300"><i class="fa-regular fa-folder-open"></i> Documentation</a>
               </li>
             </ul>
           </nav>
